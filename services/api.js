@@ -1,25 +1,23 @@
 'use strict'
 
-import axios from "axios";
+const { default: axios } = require("axios");
 
-function getDoc(api, coll, id) {
-    return axios.get(`${api.url}/app/colls/${coll}/docs/${id}`, options(api));
-}
-
-function createDoc(api, coll, doc) {
-    return axios.post(`${api.url}/app/colls/${coll}/docs`, doc, options(api));
-}
-
-function updateDoc(api, coll, doc) {
-    return axios.put(`${api.url}/app/colls/${coll}/docs/${doc._id}`, doc, options(api));
-}
-
-function deleteDoc(api, coll, doc) {
-    return axios.delete(`${api.url}/app/colls/${coll}/docs/${doc._id}`, options(api));
-}
-
-function executeQuery(api, coll, query) {
-    return axios.post(`${api.url}/app/colls/${coll}/docs/find`, query, options(api));
+module.exports = {
+    getDoc(api, coll, id) {
+        return axios.get(`${api.url}/app/colls/${coll}/docs/${id}`, options(api));
+    },
+    createDoc(api, coll, doc) {
+        return axios.post(`${api.url}/app/colls/${coll}/docs`, doc, options(api));
+    },
+    updateDoc(api, coll, doc) {
+        return axios.put(`${api.url}/app/colls/${coll}/docs/${doc._id}`, doc, options(api));
+    },
+    deleteDoc(api, coll, doc) {
+        return axios.delete(`${api.url}/app/colls/${coll}/docs/${doc._id}`, options(api));
+    },
+    executeQuery(api, coll, query) {
+        return axios.post(`${api.url}/app/colls/${coll}/docs/find`, query, options(api));
+    }
 }
 
 function options(api) {
@@ -29,5 +27,3 @@ function options(api) {
 function headers(api) {
     return { Authorization: `Bearer ${api.token}` }
 }
-
-export { getDoc, createDoc, updateDoc, deleteDoc, executeQuery };

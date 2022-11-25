@@ -15,6 +15,10 @@ module.exports = (data, props) => {
       {
         "type": "widget",
         "name": "home"
+      },
+      {
+        "type": "widget",
+        "name": "debug"
       }
     ]
   }
