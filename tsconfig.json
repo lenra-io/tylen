@@ -2,9 +2,10 @@
   "compilerOptions": {
     "target": "es2016",
     "lib": [
-      "es6"
+      "es6",
+      "dom"
     ],
-    "module": "commonjs",
+    "module": "NodeNext",
     "rootDir": "src",
     "resolveJsonModule": true,
     "allowJs": true,

@@ -8,18 +8,17 @@ type Subscription = {
     target_user_id: String;
 };
 
-
-async function create(api, subscriptionData: Subscription) {
+async function create(api: any, subscriptionData: Subscription) {
     return Api.createDoc(api, "subscriptions", subscriptionData);
 }
 
-async function subscribeTo(api, targetUserIdentifier: String) {
+async function subscribeTo(api: any, targetUserIdentifier: String) {
     const user = await UserServices.get(api);
     const targetUser = await UserServices.getByIdentifier(api, targetUserIdentifier);
-    return this.create(api, { subscriber_id: user._id, target_user_id: targetUser._id });
+    return create(api, { subscriber_id: user._id, target_user_id: targetUser._id });
 }
 
-async function unsubscribeFrom(api, targetUserIdentifier: String) {
+async function unsubscribeFrom(api: any, targetUserIdentifier: String) {
     const user = await UserServices.get(api);
     const targetUser = await UserServices.getByIdentifier(api, targetUserIdentifier);
     const subscription = await Api.executeQuery(api, "subscriptions", {

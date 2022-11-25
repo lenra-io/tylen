@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (data, counter) => {
+export default (data, counter) => {
     return {
         "type": "flex",
         "direction": "vertical",

@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (data, props) => {
+export default (data, props) => {
   return {
     "type": "flex",
     "direction": "vertical",
