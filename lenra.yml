@@ -12,7 +12,7 @@ generator:
       - npm i --omit=dev
     cmd:
       - node
-      - server.js
+      - build/server.js
     ports:
       - 3000
     ignores:
