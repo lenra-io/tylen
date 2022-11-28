@@ -18,15 +18,15 @@
 <br />
 <div align="center">
 
-<h3 align="center">Tilen</h3>
+<h3 align="center">Tylen</h3>
 
   <p align="center">
     Keep in touch with your friends on Lenra.
     <br />
     <br />
-    <a href="https://github.com/lenra-io/tilen/issues">Report Bug</a>
+    <a href="https://github.com/lenra-io/tylen/issues">Report Bug</a>
     ·
-    <a href="https://github.com/lenra-io/tilen/issues">Request Feature</a>
+    <a href="https://github.com/lenra-io/tylen/issues">Request Feature</a>
   </p>
 </div>
 
@@ -46,7 +46,7 @@ Installation instructions can be found here https://github.com/lenra-io/lenra_cl
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To run the Tilen app you first need to build the application.
+To run the Tylen app you first need to build the application.
 ```console
 lenra build
 ```
@@ -88,20 +88,20 @@ Distributed under the **MIT** License. See [LICENSE](./LICENSE) for more informa
 
 Lenra - [@lenra_dev](https://twitter.com/lenra_dev) - contact@lenra.io
 
-Project Link: [https://github.com/lenra-io/tilen](https://github.com/lenra-io/tilen)
+Project Link: [https://github.com/lenra-io/tylen](https://github.com/lenra-io/tylen)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lenra-io/tilen.svg?style=for-the-badge
-[contributors-url]: https://github.com/lenra-io/tilen/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lenra-io/tilen.svg?style=for-the-badge
-[forks-url]: https://github.com/lenra-io/tilen/network/members
-[stars-shield]: https://img.shields.io/github/stars/lenra-io/tilen.svg?style=for-the-badge
-[stars-url]: https://github.com/lenra-io/tilen/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lenra-io/tilen.svg?style=for-the-badge
-[issues-url]: https://github.com/lenra-io/tilen/issues
-[license-shield]: https://img.shields.io/github/license/lenra-io/tilen.svg?style=for-the-badge
-[license-url]: https://github.com/lenra-io/tilen/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/lenra-io/tylen.svg?style=for-the-badge
+[contributors-url]: https://github.com/lenra-io/tylen/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/lenra-io/tylen.svg?style=for-the-badge
+[forks-url]: https://github.com/lenra-io/tylen/network/members
+[stars-shield]: https://img.shields.io/github/stars/lenra-io/tylen.svg?style=for-the-badge
+[stars-url]: https://github.com/lenra-io/tylen/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lenra-io/tylen.svg?style=for-the-badge
+[issues-url]: https://github.com/lenra-io/tylen/issues
+[license-shield]: https://img.shields.io/github/license/lenra-io/tylen.svg?style=for-the-badge
+[license-url]: https://github.com/lenra-io/tylen/blob/master/LICENSE
