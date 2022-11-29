@@ -1,6 +1,6 @@
 'use strict'
 
-export default (data, props) => {
+export default (data: any, props: any) => {
   return {
     "type": "container",
     "decoration": {
