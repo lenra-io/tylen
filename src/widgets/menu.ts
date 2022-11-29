@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (data, props) => {
+export default (data: any, props: any) => {
   return {
     "type": "container",
     "decoration": {
@@ -46,7 +46,7 @@ module.exports = (data, props) => {
             "type": "container",
             "child": {
               "type": "text",
-              "value": "Hello World",
+              "value": "Tylen",
               "textAlign": "center",
               "style": {
                 "fontWeight": "bold",

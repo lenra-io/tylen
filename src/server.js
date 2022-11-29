@@ -4,11 +4,12 @@
 
 "use strict"
 
+import manifestHandler from './index';
+
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
 
-const manifestHandler = require('./index.js');
 const defaultMaxSize = '100kb'; // body-parser default
 
 const rawLimit = process.env.MAX_RAW_SIZE || defaultMaxSize;

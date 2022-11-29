@@ -1,13 +1,29 @@
 componentsApi: "1.0"
 generator:
   dofigen:
+    builders:
+      - name: typescript
+        workdir: /app
+        from: "docker.io/bitnami/node:16"
+        caches:
+          - /app/node_modules
+        adds:
+          - .
+        script:
+          - npm i
+          - npx tsc
     from: "docker.io/bitnami/node:16"
     workdir: /app
     root:
       script:
         - chown -R 1000 /app
+    artifacts:
+      - builder: typescript
+        source: /app/build/
+        destination: /app/
     adds:
-      - .
+      - package.json
+      - package-lock.json
     script:
       - npm i --omit=dev
     cmd:
@@ -18,9 +34,5 @@ generator:
     ignores:
       - "**"
       - "!/*.json"
-      - "!/server.js"
-      - "!/index.js"
-      - "!/listeners/"
+      - "!/src/**"
       - "!/resources/"
-      - "!/services/"
-      - "!/widgets/"
