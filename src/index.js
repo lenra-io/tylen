@@ -1,21 +1,25 @@
 'use strict'
 // Widgets
 
+import debugWidget from './widgets/debug';
+import firstTimePage from './widgets/firstTimePage';
 import mainWidget from './widgets/main';
 import menuWidget from './widgets/menu';
-import debugWidget from './widgets/debug';
+import navigator from './widgets/navigator';
 
+import debugListener from './listeners/debug';
 import onEnvStart from './listeners/onEnvStart';
 import onSessionStart from './listeners/onSessionStart';
 import onUserFirstJoin from './listeners/onUserFirstJoin';
-import debugListener from './listeners/debug';
 
 export default async () => {
   return {
     widgets: {
+      debug: debugWidget,
+      firstTimePage: firstTimePage,
       main: mainWidget,
       menu: menuWidget,
-      debug: debugWidget,
+      navigator: navigator
     },
     listeners: {
       onEnvStart: onEnvStart,

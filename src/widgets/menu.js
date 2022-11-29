@@ -46,7 +46,7 @@ export default (data, props) => {
             "type": "container",
             "child": {
               "type": "text",
-              "value": "Hello World",
+              "value": "Tylen",
               "textAlign": "center",
               "style": {
                 "fontWeight": "bold",

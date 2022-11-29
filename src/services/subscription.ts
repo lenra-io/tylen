@@ -15,7 +15,7 @@ async function create(api: any, subscriptionData: Subscription) {
 async function subscribeTo(api: any, targetUserIdentifier: String) {
     const user = await UserServices.get(api);
     const targetUser = await UserServices.getByIdentifier(api, targetUserIdentifier);
-    return create(api, { subscriber_id: user._id, target_user_id: targetUser._id });
+    return create(api, { subscriber_id: user._id!, target_user_id: targetUser._id! });
 }
 
 async function unsubscribeFrom(api: any, targetUserIdentifier: String) {

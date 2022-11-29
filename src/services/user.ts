@@ -3,21 +3,24 @@
 import * as Api from './api';
 
 type User = {
+    _id?: string;
     id?: string;
     name: string;
     identifier: string;
     picture?: string;
     description?: string;
+    nav?: string;
+    navData?: any;
 };
 
-async function get(api: any) {
+async function get(api: any): Promise<User> {
     const value = await Api.executeQuery(api, "users", {
         "id": "@me"
     });
     return value.data[0];
 }
 
-async function getByIdentifier(api: any, userIdentifier: String) {
+async function getByIdentifier(api: any, userIdentifier: String): Promise<User> {
     const value = await Api.executeQuery(api, "users", {
         "identifier": userIdentifier
     });
