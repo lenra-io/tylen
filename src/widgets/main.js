@@ -14,10 +14,6 @@ export default (data, props) => {
       },
       {
         "type": "widget",
-        "name": "home"
-      },
-      {
-        "type": "widget",
         "name": "debug"
       }
     ]

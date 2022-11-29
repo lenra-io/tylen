@@ -3,6 +3,7 @@
 import * as Api from './api';
 
 type User = {
+    id?: string;
     name: string;
     identifier: string;
     picture?: string;
@@ -23,13 +24,13 @@ async function getByIdentifier(api: any, userIdentifier: String) {
     return value.data[0];
 }
 
-function create(api: any, userData: User) {
-    return Api.createDoc(api, "users", userData);
+function initializeUser(api: any) {
+    return Api.createDoc(api, "users", { id: "@me" });
 }
 
 async function update(api: any, data: User) {
     const user = await get(api);
-    return await Api.updateDoc(api, "users", { "_id": user._id, ...data });
+    return await Api.updateDoc(api, "users", { ...user, ...data });
 }
 
 async function deleteUser(api: any) {
@@ -39,4 +40,4 @@ async function deleteUser(api: any) {
 
 
 
-export { User, get, getByIdentifier, create, update, deleteUser };
+export { User, get, getByIdentifier, initializeUser, update, deleteUser };
