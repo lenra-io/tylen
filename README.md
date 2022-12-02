@@ -21,7 +21,7 @@
 <h3 align="center">Tylen</h3>
 
   <p align="center">
-    Keep in touch with your friends on Lenra.
+    Keep in touch with the world.
     <br />
     <br />
     <a href="https://github.com/lenra-io/tylen/issues">Report Bug</a>
