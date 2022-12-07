@@ -11,6 +11,7 @@ import debugListener from './listeners/debug';
 import onEnvStart from './listeners/onEnvStart';
 import onSessionStart from './listeners/onSessionStart';
 import onUserFirstJoin from './listeners/onUserFirstJoin';
+import header from './widgets/header';
 
 export default async () => {
   return {
@@ -19,7 +20,8 @@ export default async () => {
       firstTimePage: firstTimePage,
       main: mainWidget,
       menu: menuWidget,
-      navigator: navigator
+      navigator: navigator,
+      header: header
     },
     listeners: {
       onEnvStart: onEnvStart,
