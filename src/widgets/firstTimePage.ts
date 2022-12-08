@@ -20,65 +20,82 @@ export default async (data: any, props: any) => {
                 }
             },
             {
-                type: "container",
-                constraints: {
-                    maxWidth: 600,
-                },
-                child: {
-                    type: "flex",
-                    fillParent: true,
-                    direction: "vertical",
-                    mainAxisAlignment: "center",
-                    crossAxisAlignment: "center",
-                    spacing: 16,
-                    children: [
-                        {
-                            type: "text",
-                            value: "Welcome on Tylen! Please set up your profile."
+                type: "flex",
+                fillParent: true,
+                mainAxisAlignment: "center",
+                crossAxisAlignment: "center",
+                children: [
+                    {
+                        type: "container",
+                        constraints: {
+                            maxWidth: 600,
                         },
-                        {
-                            type: "form",
-                            onSubmit: {
-                                action: "submitFirstTimePageForm",
-                            },
-                            child: {
-                                type: "flex",
-                                direction: "vertical",
-                                children: [
-                                    {
-                                        type: "text",
-                                        value: "Please enter your username."
+                        child: {
+                            type: "flex",
+                            fillParent: true,
+                            direction: "vertical",
+                            mainAxisAlignment: "center",
+                            crossAxisAlignment: "center",
+                            spacing: 16,
+                            children: [
+                                {
+                                    type: "text",
+                                    value: "Welcome on Tylen! Please set up your profile."
+                                },
+                                {
+                                    type: "form",
+                                    onSubmit: {
+                                        action: "submitFirstTimePageForm",
                                     },
-                                    {
-                                        type: "textfield",
-                                        name: "username",
-                                        value: ""
-                                    },
-                                    {
-                                        type: "text",
-                                        value: "And your identifier which can be used by other users to find you on Tylen."
-                                    },
-                                    {
-                                        type: "textfield",
-                                        name: "identifier",
-                                        value: ""
-                                    },
-                                    {
-                                        type: "textfield",
-                                        name: "profilePicture",
-                                        value: ""
-                                    },
-                                    {
-                                        type: "textfield",
-                                        name: "description",
-                                        value: ""
-                                    },
-                                ]
-                            }
+                                    child: {
+                                        type: "flex",
+                                        direction: "vertical",
+                                        children: [
+                                            {
+                                                type: "text",
+                                                value: "Username"
+                                            },
+                                            {
+                                                type: "textfield",
+                                                name: "username",
+                                                value: ""
+                                            },
+                                            {
+                                                type: "text",
+                                                value: "Identifier"
+                                            },
+                                            {
+                                                type: "textfield",
+                                                name: "identifier",
+                                                value: ""
+                                            },
+                                            {
+                                                type: "text",
+                                                value: "Profile picture (enter url of your image) - Facultative"
+                                            },
+                                            {
+                                                type: "textfield",
+                                                name: "profilePicture",
+                                                value: ""
+                                            },
+                                            {
+                                                type: "text",
+                                                value: "Bio - Facultative"
+                                            },
+                                            {
+                                                type: "textfield",
+                                                name: "description",
+                                                value: ""
+                                            },
+                                        ]
+                                    }
+                                },
+                            ]
                         },
-                    ]
-                },
+                    },
+                ]
             },
+
         ]
     }
 }
