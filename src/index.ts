@@ -1,6 +1,7 @@
 'use strict'
 // Widgets
 
+import createPostPage from './widgets/createPostPage';
 import debugWidget from './widgets/debug';
 import firstTimePage from './widgets/firstTimePage';
 import header from './widgets/header';
@@ -21,6 +22,7 @@ import submitFirstTimePageForm from './listeners/submitFirstTimePageForm';
 export default async () => {
   return {
     widgets: {
+      createPostPage: createPostPage,
       debug: debugWidget,
       firstTimePage: firstTimePage,
       header: header,
