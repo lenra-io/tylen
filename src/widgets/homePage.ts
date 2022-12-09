@@ -19,9 +19,22 @@ export default (data: any, props: any) => {
                                 action: "openProfileMenu"
                             },
                             child: {
-                                type: "image",
-                                src: "logo.png"
-                            },
+                                type: "stack",
+                                alignment: "bottomRight",
+                                children: [
+                                    // TODO: Change image to profile picture or placeholder
+                                    {
+                                        type: "image",
+                                        src: "logo.png"
+                                    },
+                                    {
+                                        type: "icon",
+                                        value: "circle",
+                                        size: 8,
+                                        color: 0xFFFF0000
+                                    }
+                                ]
+                            }
                         },
                         {
                             type: "text",
