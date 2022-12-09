@@ -31,7 +31,7 @@ function initializeUser(api: any) {
     return Api.createDoc(api, "users", { id: "@me" });
 }
 
-async function update(api: any, data: User) {
+async function update(api: any, data: any) {
     const user = await get(api);
     return await Api.updateDoc(api, "users", { ...user, ...data });
 }

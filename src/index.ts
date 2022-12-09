@@ -4,6 +4,7 @@
 import debugWidget from './widgets/debug';
 import firstTimePage from './widgets/firstTimePage';
 import header from './widgets/header';
+import homePage from './widgets/homePage';
 import mainWidget from './widgets/main';
 import menuWidget from './widgets/menu';
 import navigator from './widgets/navigator';
@@ -21,6 +22,7 @@ export default async () => {
       debug: debugWidget,
       firstTimePage: firstTimePage,
       header: header,
+      homePage: homePage,
       main: mainWidget,
       menu: menuWidget,
       navigator: navigator,

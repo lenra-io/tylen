@@ -42,6 +42,7 @@ export default async (data: any, props: any) => {
                                     type: "text",
                                     value: "Welcome on Tylen! Please set up your profile."
                                 },
+                                // TODO: Add value checking in form fields (check identifier does not exist, check not null username)
                                 {
                                     type: "form",
                                     onSubmit: {
