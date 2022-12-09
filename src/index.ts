@@ -8,6 +8,7 @@ import homePage from './widgets/homePage';
 import mainWidget from './widgets/main';
 import menuWidget from './widgets/menu';
 import navigator from './widgets/navigator';
+import postFeed from './widgets/postFeed';
 
 import debugListener from './listeners/debug';
 import navigatorListener from './listeners/navigator';
@@ -26,6 +27,7 @@ export default async () => {
       main: mainWidget,
       menu: menuWidget,
       navigator: navigator,
+      postFeed: postFeed,
     },
     listeners: {
       debug: debugListener,
