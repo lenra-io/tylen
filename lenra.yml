@@ -21,6 +21,9 @@ generator:
       - builder: typescript
         source: /app/build/
         destination: /app/
+      - builder: typescript
+        source: /app/resources/
+        destination: /app/resources/
     adds:
       - package.json
       - package-lock.json
