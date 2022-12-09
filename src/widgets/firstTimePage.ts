@@ -5,7 +5,7 @@ export default async (data: any, props: any) => {
         type: "flex",
         fillParent: true,
         direction: "vertical",
-        spacing: 16,
+        spacing: 32,
         children: [
             {
                 type: "widget",
@@ -50,43 +50,73 @@ export default async (data: any, props: any) => {
                                     child: {
                                         type: "flex",
                                         direction: "vertical",
+                                        spacing: 16,
                                         children: [
                                             {
-                                                type: "text",
-                                                value: "Username"
+                                                type: "flex",
+                                                direction: "vertical",
+                                                children: [
+                                                    {
+                                                        type: "text",
+                                                        value: "Username"
+                                                    },
+                                                    {
+                                                        type: "textfield",
+                                                        name: "username",
+                                                        value: ""
+                                                    },
+                                                ]
                                             },
                                             {
-                                                type: "textfield",
-                                                name: "username",
-                                                value: ""
+                                                type: "flex",
+                                                direction: "vertical",
+                                                children: [
+                                                    {
+                                                        type: "text",
+                                                        value: "Identifier"
+                                                    },
+                                                    {
+                                                        type: "textfield",
+                                                        name: "identifier",
+                                                        value: ""
+                                                    },
+                                                ]
                                             },
                                             {
-                                                type: "text",
-                                                value: "Identifier"
+                                                type: "flex",
+                                                direction: "vertical",
+                                                children: [
+                                                    {
+                                                        type: "text",
+                                                        value: "Profile picture (enter url of your image) - Facultative"
+                                                    },
+                                                    {
+                                                        type: "textfield",
+                                                        name: "profilePicture",
+                                                        value: ""
+                                                    },
+                                                ]
                                             },
                                             {
-                                                type: "textfield",
-                                                name: "identifier",
-                                                value: ""
+                                                type: "flex",
+                                                direction: "vertical",
+                                                children: [
+                                                    {
+                                                        type: "text",
+                                                        value: "Bio - Facultative"
+                                                    },
+                                                    {
+                                                        type: "textfield",
+                                                        name: "description",
+                                                        value: ""
+                                                    },
+                                                ]
                                             },
                                             {
-                                                type: "text",
-                                                value: "Profile picture (enter url of your image) - Facultative"
-                                            },
-                                            {
-                                                type: "textfield",
-                                                name: "profilePicture",
-                                                value: ""
-                                            },
-                                            {
-                                                type: "text",
-                                                value: "Bio - Facultative"
-                                            },
-                                            {
-                                                type: "textfield",
-                                                name: "description",
-                                                value: ""
-                                            },
+                                                type: "button",
+                                                text: "Submit",
+                                                submit: true,
+                                            }
                                         ]
                                     }
                                 },
