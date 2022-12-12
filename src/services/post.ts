@@ -21,6 +21,10 @@ async function getPost(api: any, id: string): Promise<Post> {
     return value.data[0];
 }
 
+async function createPost(api: any, data: Post) {
+    return await Api.createDoc(api, "posts", data);
+}
+
 // async function update(api: any, data: any) {
 //     const user = await get(api);
 //     return await Api.updateDoc(api, "users", { ...user, ...data });
@@ -33,4 +37,4 @@ async function deletePost(api: any, id: string) {
 
 
 
-export { Post, getPost, getPosts, deletePost };
+export { Post, getPost, getPosts, createPost, deletePost };

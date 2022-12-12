@@ -9,6 +9,7 @@ import homePage from './widgets/homePage';
 import mainWidget from './widgets/main';
 import menuWidget from './widgets/menu';
 import navigator from './widgets/navigator';
+import postCard from './widgets/postCard';
 import postFeed from './widgets/postFeed';
 import profilePictureWithNotification from './widgets/profilePictureWithNotification';
 
@@ -17,6 +18,8 @@ import navigatorListener from './listeners/navigator';
 import onEnvStart from './listeners/onEnvStart';
 import onSessionStart from './listeners/onSessionStart';
 import onUserFirstJoin from './listeners/onUserFirstJoin';
+import resetDatabase from './listeners/resetDatabase';
+import sendPost from './listeners/sendPost';
 import submitFirstTimePageForm from './listeners/submitFirstTimePageForm';
 
 export default async () => {
@@ -30,6 +33,7 @@ export default async () => {
       main: mainWidget,
       menu: menuWidget,
       navigator: navigator,
+      postCard: postCard,
       postFeed: postFeed,
       profilePictureWithNotification: profilePictureWithNotification,
     },
@@ -39,6 +43,8 @@ export default async () => {
       onEnvStart: onEnvStart,
       onSessionStart: onSessionStart,
       onUserFirstJoin: onUserFirstJoin,
+      resetDatabase: resetDatabase,
+      sendPost: sendPost,
       submitFirstTimePageForm: submitFirstTimePageForm,
     },
     rootWidget: 'main'

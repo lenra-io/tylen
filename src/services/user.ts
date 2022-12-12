@@ -20,6 +20,13 @@ async function get(api: any): Promise<User> {
     return value.data[0];
 }
 
+async function getById(api: any, id: String): Promise<User> {
+    const value = await Api.executeQuery(api, "users", {
+        "id": id
+    });
+    return value.data[0];
+}
+
 async function getByIdentifier(api: any, userIdentifier: String): Promise<User> {
     const value = await Api.executeQuery(api, "users", {
         "identifier": userIdentifier
@@ -43,4 +50,4 @@ async function deleteUser(api: any) {
 
 
 
-export { User, get, getByIdentifier, initializeUser, update, deleteUser };
+export { User, get, getById, getByIdentifier, initializeUser, update, deleteUser };
