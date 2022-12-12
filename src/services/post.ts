@@ -7,6 +7,7 @@ type Post = {
     creatorId?: string;
     text: string;
     parentPost?: string;
+    date?: number,
 };
 
 async function getPosts(api: any): Promise<Array<Post>> {
@@ -22,7 +23,7 @@ async function getPost(api: any, id: string): Promise<Post> {
 }
 
 async function createPost(api: any, data: Post) {
-    return await Api.createDoc(api, "posts", data);
+    return await Api.createDoc(api, "posts", { date: Date.now(), ...data });
 }
 
 // async function update(api: any, data: any) {

@@ -7,6 +7,8 @@ export default (data: any, props: any) => {
     const user: User = data[0];
     const post: Post = props;
 
+    console.log(post.date);
+
     return {
         type: "container",
         constraints: {
