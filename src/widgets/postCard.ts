@@ -79,9 +79,19 @@ export default (data: any, props: any) => {
                     mainAxisAlignment: "end",
                     children: [
                         {
-                            type: "icon",
-                            color: 0xFFE92236,
-                            value: "favorite"
+                            type: "actionable",
+                            onPressed: {
+                                // TODO: Implement likePost listener + database elements
+                                action: "likePost",
+                                props: {
+                                    id: post._id
+                                }
+                            },
+                            child: {
+                                type: "icon",
+                                color: 0xFFE92236,
+                                value: "favorite"
+                            }
                         }
                     ]
                 }
