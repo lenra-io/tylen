@@ -98,17 +98,48 @@ export default (data: any, props: any) => {
                     value: `${post.text}`,
                 },
                 {
-                    type: "widget",
-                    name: "postLikeButton",
-                    props: {
-                        postId: post._id,
-                        userId: user.id
-                    },
-                    coll: "postLikes",
-                    query: {
-                        postId: post._id
-                    }
-                },
+                    type: "flex",
+                    fillParent: true,
+                    children: [
+                        {
+                            type: "flexible",
+                            child: {
+                                type: "text",
+                                value: ""
+                            }
+                        },
+                        {
+                            type: "flexible",
+                            child: {
+                                type: "widget",
+                                name: "postCommentButton",
+                                props: {
+                                    postId: post._id
+                                },
+                                coll: "posts",
+                                query: {
+                                    parentPost: post._id
+                                }
+                            },
+                        },
+                        {
+                            type: "flexible",
+                            child: {
+                                type: "widget",
+                                name: "postLikeButton",
+                                props: {
+                                    postId: post._id,
+                                    userId: user.id
+                                },
+                                coll: "postLikes",
+                                query: {
+                                    postId: post._id
+                                }
+                            },
+                        },
+                    ]
+                }
+
 
             ]
         }

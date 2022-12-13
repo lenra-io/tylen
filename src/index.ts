@@ -10,6 +10,7 @@ import mainWidget from './widgets/main';
 import menuWidget from './widgets/menu';
 import navigator from './widgets/navigator';
 import postCard from './widgets/postCard';
+import postCommentButton from './widgets/postCommentButton';
 import postFeed from './widgets/postFeed';
 import postLikeButton from './widgets/postLikeButton';
 import profilePictureWithNotification from './widgets/profilePictureWithNotification';
@@ -36,6 +37,7 @@ export default async () => {
       menu: menuWidget,
       navigator: navigator,
       postCard: postCard,
+      postCommentButton: postCommentButton,
       postFeed: postFeed,
       postLikeButton: postLikeButton,
       profilePictureWithNotification: profilePictureWithNotification,
