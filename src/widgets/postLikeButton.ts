@@ -16,6 +16,9 @@ export default (data: any, props: any) => {
         children: [
             {
                 type: "text",
+                style: {
+                    fontSize: 12,
+                },
                 value: `${data.length}`
             },
             {
