@@ -12,7 +12,7 @@ export default (data: any, props: any) => {
 
     const testData = new Date(timeSinceCreation);
 
-    let timeSinceCreationIndicator = "";
+    let timeSinceCreationIndicator;
 
     if (timeSinceCreation / 1000 / 60 / 60 / 24 / 365 >= 1) {
         timeSinceCreationIndicator = `${Math.floor(timeSinceCreation / 1000 / 60 / 60 / 24 / 365)} years`;
@@ -29,7 +29,6 @@ export default (data: any, props: any) => {
     return {
         type: "container",
         constraints: {
-            minWidth: 600,
             maxWidth: 600,
         },
         border: {
