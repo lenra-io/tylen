@@ -7,7 +7,24 @@ export default (data: any, props: any) => {
     const user: User = data[0];
     const post: Post = props;
 
-    console.log(post.date);
+    // Time in milliseconds
+    const timeSinceCreation: number = Date.now() - post.date!;
+
+    const testData = new Date(timeSinceCreation);
+
+    let timeSinceCreationIndicator = "";
+
+    if (timeSinceCreation / 1000 / 60 / 60 / 24 / 365 >= 1) {
+        timeSinceCreationIndicator = `${Math.floor(timeSinceCreation / 1000 / 60 / 60 / 24 / 365)} years`;
+    } else if (timeSinceCreation / 1000 / 60 / 60 / 24 >= 1) {
+        timeSinceCreationIndicator = `${Math.floor(timeSinceCreation / 1000 / 60 / 60 / 24)} days`;
+    } else if (timeSinceCreation / 1000 / 60 / 60 >= 1) {
+        timeSinceCreationIndicator = `${Math.floor(timeSinceCreation / 1000 / 60 / 60)} hours`;
+    } else if (timeSinceCreation / 1000 / 60 >= 1) {
+        timeSinceCreationIndicator = `${Math.floor(timeSinceCreation / 1000 / 60)} minutes`;
+    } else {
+        timeSinceCreationIndicator = `${Math.floor(timeSinceCreation / 1000)} seconds`;
+    }
 
     return {
         type: "container",
@@ -67,7 +84,13 @@ export default (data: any, props: any) => {
                             style: {
                                 fontWeight: "w600"
                             },
-                            value: `${user.name}`
+                            value: `${user.name}`,
+                            children: [
+                                {
+                                    type: "text",
+                                    value: ` - ${timeSinceCreationIndicator}`
+                                }
+                            ]
                         }
                     ]
                 },
@@ -76,27 +99,18 @@ export default (data: any, props: any) => {
                     value: `${post.text}`,
                 },
                 {
-                    type: "flex",
-                    fillParent: true,
-                    mainAxisAlignment: "end",
-                    children: [
-                        {
-                            type: "actionable",
-                            onPressed: {
-                                // TODO: Implement likePost listener + database elements
-                                action: "likePost",
-                                props: {
-                                    id: post._id
-                                }
-                            },
-                            child: {
-                                type: "icon",
-                                color: 0xFFE92236,
-                                value: "favorite"
-                            }
-                        }
-                    ]
-                }
+                    type: "widget",
+                    name: "postLikeButton",
+                    props: {
+                        postId: post._id,
+                        userId: user.id
+                    },
+                    coll: "postLikes",
+                    query: {
+                        postId: post._id
+                    }
+                },
+
             ]
         }
     }

@@ -3,7 +3,10 @@
 import { Post } from "../services/post";
 
 export default (data: any, props: any) => {
-    // TODO get posts from database and show them from newest to oldest
+    const sortedPosts = data.sort(
+        (objA: Post, objB: Post) => Number(objB.date) - Number(objA.date),
+    );
+
     return {
         type: "flex",
         direction: "vertical",

@@ -11,9 +11,11 @@ import menuWidget from './widgets/menu';
 import navigator from './widgets/navigator';
 import postCard from './widgets/postCard';
 import postFeed from './widgets/postFeed';
+import postLikeButton from './widgets/postLikeButton';
 import profilePictureWithNotification from './widgets/profilePictureWithNotification';
 
 import debugListener from './listeners/debug';
+import likePost from './listeners/likePost';
 import navigatorListener from './listeners/navigator';
 import onEnvStart from './listeners/onEnvStart';
 import onSessionStart from './listeners/onSessionStart';
@@ -35,10 +37,12 @@ export default async () => {
       navigator: navigator,
       postCard: postCard,
       postFeed: postFeed,
+      postLikeButton: postLikeButton,
       profilePictureWithNotification: profilePictureWithNotification,
     },
     listeners: {
       debug: debugListener,
+      likePost: likePost,
       navigator: navigatorListener,
       onEnvStart: onEnvStart,
       onSessionStart: onSessionStart,
