@@ -63,7 +63,7 @@ export default async (data: any, props: any) => {
                                                     },
                                                     {
                                                         type: "textfield",
-                                                        name: "username",
+                                                        name: "name",
                                                         value: ""
                                                     },
                                                 ]

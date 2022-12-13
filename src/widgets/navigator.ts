@@ -22,6 +22,11 @@ export default (data: any, props: any) => {
                     "id": "@me"
                 }
             }
+        case "createPostPage":
+            return {
+                type: "widget",
+                name: "createPostPage",
+            }
         case "debug":
             return {
                 type: "widget",
