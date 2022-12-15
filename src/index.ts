@@ -3,6 +3,7 @@
 
 import createPostPage from './widgets/createPostPage';
 import debugWidget from './widgets/debug';
+import editProfilePage from './widgets/editProfilePage';
 import firstTimePage from './widgets/firstTimePage';
 import header from './widgets/header';
 import homePage from './widgets/homePage';
@@ -13,6 +14,7 @@ import postCard from './widgets/postCard';
 import postCommentButton from './widgets/postCommentButton';
 import postFeed from './widgets/postFeed';
 import postLikeButton from './widgets/postLikeButton';
+import profilePage from './widgets/profilePage';
 import profilePictureWithNotification from './widgets/profilePictureWithNotification';
 
 import debugListener from './listeners/debug';
@@ -24,12 +26,14 @@ import onUserFirstJoin from './listeners/onUserFirstJoin';
 import resetDatabase from './listeners/resetDatabase';
 import sendPost from './listeners/sendPost';
 import submitFirstTimePageForm from './listeners/submitFirstTimePageForm';
+import validateEntry from './listeners/validateEntry';
 
 export default async () => {
   return {
     widgets: {
       createPostPage: createPostPage,
       debug: debugWidget,
+      editProfilePage: editProfilePage,
       firstTimePage: firstTimePage,
       header: header,
       homePage: homePage,
@@ -40,6 +44,7 @@ export default async () => {
       postCommentButton: postCommentButton,
       postFeed: postFeed,
       postLikeButton: postLikeButton,
+      profilePage: profilePage,
       profilePictureWithNotification: profilePictureWithNotification,
     },
     listeners: {
@@ -52,6 +57,7 @@ export default async () => {
       resetDatabase: resetDatabase,
       sendPost: sendPost,
       submitFirstTimePageForm: submitFirstTimePageForm,
+      validateEntry: validateEntry,
     },
     rootWidget: 'main'
   }

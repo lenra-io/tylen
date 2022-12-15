@@ -1,6 +1,8 @@
 'use strict'
 
 export default async (data: any, props: any) => {
+    const user = data[0];
+
     return {
         type: "flex",
         fillParent: true,
@@ -78,6 +80,17 @@ export default async (data: any, props: any) => {
                                                     },
                                                     {
                                                         type: "textfield",
+                                                        onChanged: {
+                                                            action: "validateEntry",
+                                                            props: {
+                                                                entry: "userIdentifier"
+                                                            }
+                                                        },
+                                                        style: {
+                                                            decoration: {
+                                                                ...(user.errors?.identifierAlreadyTaken != undefined && { errorText: "This identifier is already used." })
+                                                            }
+                                                        },
                                                         name: "identifier",
                                                         value: ""
                                                     },

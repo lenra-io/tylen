@@ -3,7 +3,7 @@
 export default (data: any, props: any) => {
     let userData = data[0];
 
-    switch (userData.nav) {
+    switch (userData?.nav) {
         case "firstTimePage":
             return {
                 type: "widget",
@@ -27,10 +27,20 @@ export default (data: any, props: any) => {
                 type: "widget",
                 name: "createPostPage",
             }
+        case "profilePage":
+            return {
+                type: "widget",
+                name: "profilePage"
+            }
         case "debug":
             return {
                 type: "widget",
                 name: "debug"
+            }
+        case "editProfilePage":
+            return {
+                type: "widget",
+                name: "editProfilePage"
             }
         default:
             return {
