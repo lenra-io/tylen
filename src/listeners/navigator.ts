@@ -13,7 +13,9 @@ export default async (props: any, event: any, api: any) => {
         case "homePage":
             return navigateTo(api, userData, "homePage");
         case "createPostPage":
-            return navigateTo(api, userData, "createPostPage")
+            return navigateTo(api, userData, "createPostPage");
+        case "profile":
+            return navigateTo(api, userData, "profilePage");
         case "debug":
             return navigateTo(api, userData, "debug");
     }

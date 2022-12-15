@@ -19,7 +19,10 @@ export default (data: any, props: any) => {
                                 {
                                     type: "actionable",
                                     onPressed: {
-                                        action: "openProfileMenu"
+                                        action: "navigator",
+                                        props: {
+                                            page: "profile"
+                                        }
                                     },
                                     child: {
                                         type: "widget",

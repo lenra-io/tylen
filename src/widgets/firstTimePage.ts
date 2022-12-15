@@ -1,6 +1,8 @@
 'use strict'
 
 export default async (data: any, props: any) => {
+    const user = data[0];
+
     return {
         type: "flex",
         fillParent: true,
@@ -78,6 +80,22 @@ export default async (data: any, props: any) => {
                                                     },
                                                     {
                                                         type: "textfield",
+                                                        onChanged: {
+                                                            action: "validateEntry",
+                                                            props: {
+                                                                entry: "userIdentifier"
+                                                            }
+                                                        },
+                                                        style: {
+                                                            decoration: {
+                                                                /*
+                                                                    TODO: It might be better to put this widget inside of a widget that we can call "validator" which will take care 
+                                                                    of building the textfield according to the validation result.
+                                                                    This will avoid putting the errors inside of the user table.
+                                                                */
+                                                                ...(user.errors?.identifierAlreadyTaken != undefined && { errorText: "This identifier is already taken." })
+                                                            }
+                                                        },
                                                         name: "identifier",
                                                         value: ""
                                                     },

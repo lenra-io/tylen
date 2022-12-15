@@ -27,6 +27,11 @@ export default (data: any, props: any) => {
                 type: "widget",
                 name: "createPostPage",
             }
+        case "profilePage":
+            return {
+                type: "widget",
+                name: "profilePage"
+            }
         case "debug":
             return {
                 type: "widget",

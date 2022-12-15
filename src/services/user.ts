@@ -11,6 +11,7 @@ type User = {
     description?: string;
     nav?: string;
     navData?: any;
+    errors?: any;
 };
 
 async function get(api: any): Promise<User> {
@@ -35,7 +36,7 @@ async function getByIdentifier(api: any, userIdentifier: String): Promise<User> 
 }
 
 function initializeUser(api: any) {
-    return Api.createDoc(api, "users", { id: "@me" });
+    return Api.createDoc(api, "users", { id: "@me", errors: {} });
 }
 
 async function update(api: any, data: any) {
