@@ -21,7 +21,7 @@ export default (data: any, props: any) => {
                                     onPressed: {
                                         action: "navigator",
                                         props: {
-                                            page: "profile"
+                                            page: "profilePage"
                                         }
                                     },
                                     child: {

@@ -37,6 +37,11 @@ export default (data: any, props: any) => {
                 type: "widget",
                 name: "debug"
             }
+        case "editProfilePage":
+            return {
+                type: "widget",
+                name: "editProfilePage"
+            }
         default:
             return {
                 type: "widget",

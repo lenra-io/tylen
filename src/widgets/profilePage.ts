@@ -81,6 +81,16 @@ export default (data: any, props: any) => {
                             }
                         },
                         text: "Subscribed to"
+                    },
+                    {
+                        type: "button",
+                        onPressed: {
+                            action: "navigator",
+                            props: {
+                                page: "editProfilePage"
+                            }
+                        },
+                        text: "Edit profile"
                     }
                 ]
             },

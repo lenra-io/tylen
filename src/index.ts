@@ -3,6 +3,7 @@
 
 import createPostPage from './widgets/createPostPage';
 import debugWidget from './widgets/debug';
+import editProfilePage from './widgets/editProfilePage';
 import firstTimePage from './widgets/firstTimePage';
 import header from './widgets/header';
 import homePage from './widgets/homePage';
@@ -32,6 +33,7 @@ export default async () => {
     widgets: {
       createPostPage: createPostPage,
       debug: debugWidget,
+      editProfilePage: editProfilePage,
       firstTimePage: firstTimePage,
       header: header,
       homePage: homePage,
