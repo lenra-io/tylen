@@ -1,7 +1,6 @@
 'use strict'
 
 import * as userServices from "../services/user";
-import * as subscriptionServices from "../services/subscription";
 import * as apiServices from "../services/api";
 
 export default async (props: any, event: any, api: any) => {

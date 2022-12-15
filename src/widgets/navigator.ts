@@ -3,7 +3,7 @@
 export default (data: any, props: any) => {
     let userData = data[0];
 
-    switch (userData.nav) {
+    switch (userData?.nav) {
         case "firstTimePage":
             return {
                 type: "widget",

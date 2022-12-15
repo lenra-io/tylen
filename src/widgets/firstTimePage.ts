@@ -88,12 +88,7 @@ export default async (data: any, props: any) => {
                                                         },
                                                         style: {
                                                             decoration: {
-                                                                /*
-                                                                    TODO: It might be better to put this widget inside of a widget that we can call "validator" which will take care 
-                                                                    of building the textfield according to the validation result.
-                                                                    This will avoid putting the errors inside of the user table.
-                                                                */
-                                                                ...(user.errors?.identifierAlreadyTaken != undefined && { errorText: "This identifier is already taken." })
+                                                                ...(user.errors?.identifierAlreadyTaken != undefined && { errorText: "This identifier is already used." })
                                                             }
                                                         },
                                                         name: "identifier",
