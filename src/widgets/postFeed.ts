@@ -15,10 +15,9 @@ export default (data: any, props: any) => {
             return {
                 type: "widget",
                 name: "postCard",
-                props: post,
-                coll: "users",
+                coll: "posts",
                 query: {
-                    id: post.creatorId
+                    _id: post._id
                 }
             }
         })

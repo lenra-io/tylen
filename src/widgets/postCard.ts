@@ -4,8 +4,8 @@ import { Post } from "../services/post";
 import { User } from "../services/user";
 
 export default (data: any, props: any) => {
-    const user: User = data[0];
-    const post: Post = props;
+    // const user: User = data[0];
+    const post: Post = data[0];
 
     // Time in milliseconds
     const timeSinceCreation: number = Date.now() - post.date!;
@@ -83,7 +83,7 @@ export default (data: any, props: any) => {
                             style: {
                                 fontWeight: "w600"
                             },
-                            value: `${user.name}`,
+                            value: `TEST`,
                             children: [
                                 {
                                     type: "text",
@@ -129,7 +129,7 @@ export default (data: any, props: any) => {
                                 name: "postLikeButton",
                                 props: {
                                     postId: post._id,
-                                    userId: user.id
+                                    userId: post.creatorId
                                 },
                                 coll: "postLikes",
                                 query: {
