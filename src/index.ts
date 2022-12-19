@@ -16,6 +16,7 @@ import postFeed from './widgets/postFeed';
 import postLikeButton from './widgets/postLikeButton';
 import profilePage from './widgets/profilePage';
 import profilePictureWithNotification from './widgets/profilePictureWithNotification';
+import searchButton from './widgets/searchButton';
 
 import debugListener from './listeners/debug';
 import likePost from './listeners/likePost';
@@ -46,6 +47,7 @@ export default async () => {
       postLikeButton: postLikeButton,
       profilePage: profilePage,
       profilePictureWithNotification: profilePictureWithNotification,
+      searchButton: searchButton
     },
     listeners: {
       debug: debugListener,

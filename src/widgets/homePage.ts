@@ -42,16 +42,14 @@ export default (data: any, props: any) => {
                                     value: "Tylen"
                                 },
                                 {
-                                    type: "actionable",
-                                    onPressed: {
-                                        action: "openSearch"
-                                    },
-                                    child: {
-                                        type: "icon",
-                                        size: 36,
-                                        value: "search",
+                                    type: "widget",
+                                    name: "searchButton",
+                                    coll: "users",
+                                    query: {
+                                        "id": "@me"
                                     }
                                 },
+
                             ]
                         }
                     },
