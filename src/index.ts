@@ -24,6 +24,7 @@ import navigatorListener from './listeners/navigator';
 import onEnvStart from './listeners/onEnvStart';
 import onSessionStart from './listeners/onSessionStart';
 import onUserFirstJoin from './listeners/onUserFirstJoin';
+import openSearch from './listeners/openSearch';
 import resetDatabase from './listeners/resetDatabase';
 import sendPost from './listeners/sendPost';
 import submitFirstTimePageForm from './listeners/submitFirstTimePageForm';
@@ -56,6 +57,7 @@ export default async () => {
       onEnvStart: onEnvStart,
       onSessionStart: onSessionStart,
       onUserFirstJoin: onUserFirstJoin,
+      openSearch: openSearch,
       resetDatabase: resetDatabase,
       sendPost: sendPost,
       submitFirstTimePageForm: submitFirstTimePageForm,
