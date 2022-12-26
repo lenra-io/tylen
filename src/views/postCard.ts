@@ -111,7 +111,7 @@ export default (data: any, props: any) => {
                         {
                             type: "flexible",
                             child: {
-                                type: "widget",
+                                type: "view",
                                 name: "postCommentButton",
                                 props: {
                                     postId: post._id
@@ -125,7 +125,7 @@ export default (data: any, props: any) => {
                         {
                             type: "flexible",
                             child: {
-                                type: "widget",
+                                type: "view",
                                 name: "postLikeButton",
                                 props: {
                                     postId: post._id,

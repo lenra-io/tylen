@@ -13,7 +13,7 @@ export default (data: any, props: any) => {
         spacing: 16,
         children: data.map((post: Post) => {
             return {
-                type: "widget",
+                type: "view",
                 name: "postCard",
                 props: post,
                 coll: "users",
