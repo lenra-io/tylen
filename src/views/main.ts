@@ -5,7 +5,7 @@ export default async (data: any, props: any) => {
     type: "stack",
     children: [
       {
-        type: "widget",
+        type: "view",
         name: "navigator",
         coll: "users",
         query: {

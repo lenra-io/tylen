@@ -6,7 +6,7 @@ export default (data: any, props: any) => {
     switch (userData?.nav) {
         case "firstTimePage":
             return {
-                type: "widget",
+                type: "view",
                 name: "firstTimePage",
                 coll: "users",
                 query: {
@@ -15,7 +15,7 @@ export default (data: any, props: any) => {
             }
         case "homePage":
             return {
-                type: "widget",
+                type: "view",
                 name: "homePage",
                 coll: "users",
                 query: {
@@ -24,27 +24,27 @@ export default (data: any, props: any) => {
             }
         case "createPostPage":
             return {
-                type: "widget",
+                type: "view",
                 name: "createPostPage",
             }
         case "profilePage":
             return {
-                type: "widget",
+                type: "view",
                 name: "profilePage"
             }
         case "debug":
             return {
-                type: "widget",
+                type: "view",
                 name: "debug"
             }
         case "editProfilePage":
             return {
-                type: "widget",
+                type: "view",
                 name: "editProfilePage"
             }
         default:
             return {
-                type: "widget",
+                type: "view",
                 name: "firstTimePage",
                 coll: "users",
                 query: {
