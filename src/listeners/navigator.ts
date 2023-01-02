@@ -18,6 +18,9 @@ export default async (props: any, event: any, api: any) => {
             return navigateTo(api, userData, "profilePage");
         case "editProfilePage":
             return navigateTo(api, userData, "editProfilePage");
+        case "searchPage":
+            console.log(event);
+            return {}
         case "debug":
             return navigateTo(api, userData, "debug");
     }

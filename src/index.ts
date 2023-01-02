@@ -16,6 +16,7 @@ import postFeed from './views/postFeed';
 import postLikeButton from './views/postLikeButton';
 import profilePage from './views/profilePage';
 import profilePictureWithNotification from './views/profilePictureWithNotification';
+import searchButton from './views/searchButton';
 
 import debugListener from './listeners/debug';
 import likePost from './listeners/likePost';
@@ -23,6 +24,7 @@ import navigatorListener from './listeners/navigator';
 import onEnvStart from './listeners/onEnvStart';
 import onSessionStart from './listeners/onSessionStart';
 import onUserFirstJoin from './listeners/onUserFirstJoin';
+import openSearch from './listeners/openSearch';
 import resetDatabase from './listeners/resetDatabase';
 import sendPost from './listeners/sendPost';
 import submitFirstTimePageForm from './listeners/submitFirstTimePageForm';
@@ -46,6 +48,7 @@ export default async () => {
       postLikeButton: postLikeButton,
       profilePage: profilePage,
       profilePictureWithNotification: profilePictureWithNotification,
+      searchButton: searchButton
     },
     listeners: {
       debug: debugListener,
@@ -54,6 +57,7 @@ export default async () => {
       onEnvStart: onEnvStart,
       onSessionStart: onSessionStart,
       onUserFirstJoin: onUserFirstJoin,
+      openSearch: openSearch,
       resetDatabase: resetDatabase,
       sendPost: sendPost,
       submitFirstTimePageForm: submitFirstTimePageForm,

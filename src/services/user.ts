@@ -12,6 +12,7 @@ type User = {
     nav?: string;
     navData?: any;
     errors?: any;
+    searchValue?: string;
 };
 
 async function get(api: any): Promise<User> {
