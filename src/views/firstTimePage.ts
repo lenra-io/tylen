@@ -10,7 +10,7 @@ export default async (data: any, props: any) => {
         spacing: 32,
         children: [
             {
-                type: "widget",
+                type: "view",
                 name: "header",
                 props: {
                     children: [

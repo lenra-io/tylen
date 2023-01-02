@@ -1,22 +1,22 @@
 'use strict'
-// Widgets
+// Views
 
-import createPostPage from './widgets/createPostPage';
-import debugWidget from './widgets/debug';
-import editProfilePage from './widgets/editProfilePage';
-import firstTimePage from './widgets/firstTimePage';
-import header from './widgets/header';
-import homePage from './widgets/homePage';
-import mainWidget from './widgets/main';
-import menuWidget from './widgets/menu';
-import navigator from './widgets/navigator';
-import postCard from './widgets/postCard';
-import postCommentButton from './widgets/postCommentButton';
-import postFeed from './widgets/postFeed';
-import postLikeButton from './widgets/postLikeButton';
-import profilePage from './widgets/profilePage';
-import profilePictureWithNotification from './widgets/profilePictureWithNotification';
-import searchButton from './widgets/searchButton';
+import createPostPage from './views/createPostPage';
+import debugView from './views/debug';
+import editProfilePage from './views/editProfilePage';
+import firstTimePage from './views/firstTimePage';
+import header from './views/header';
+import homePage from './views/homePage';
+import mainView from './views/main';
+import menuView from './views/menu';
+import navigator from './views/navigator';
+import postCard from './views/postCard';
+import postCommentButton from './views/postCommentButton';
+import postFeed from './views/postFeed';
+import postLikeButton from './views/postLikeButton';
+import profilePage from './views/profilePage';
+import profilePictureWithNotification from './views/profilePictureWithNotification';
+import searchButton from './views/searchButton';
 
 import debugListener from './listeners/debug';
 import likePost from './listeners/likePost';
@@ -32,15 +32,15 @@ import validateEntry from './listeners/validateEntry';
 
 export default async () => {
   return {
-    widgets: {
+    views: {
       createPostPage: createPostPage,
-      debug: debugWidget,
+      debug: debugView,
       editProfilePage: editProfilePage,
       firstTimePage: firstTimePage,
       header: header,
       homePage: homePage,
-      main: mainWidget,
-      menu: menuWidget,
+      main: mainView,
+      menu: menuView,
       navigator: navigator,
       postCard: postCard,
       postCommentButton: postCommentButton,
@@ -63,6 +63,6 @@ export default async () => {
       submitFirstTimePageForm: submitFirstTimePageForm,
       validateEntry: validateEntry,
     },
-    rootWidget: 'main'
+    rootView: 'main'
   }
 }

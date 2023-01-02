@@ -12,7 +12,7 @@ export default (data: any, props: any) => {
                 crossAxisAlignment: "center",
                 children: [
                     {
-                        type: "widget",
+                        type: "view",
                         name: "header",
                         props: {
                             children: [

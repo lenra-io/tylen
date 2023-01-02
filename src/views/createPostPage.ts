@@ -6,7 +6,7 @@ export default (data: any, props: any) => {
         direction: "vertical",
         children: [
             {
-                type: "widget",
+                type: "view",
                 name: "header",
                 props: {
                     children: [

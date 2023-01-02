@@ -12,7 +12,7 @@ export default (data: any, props: any) => {
                 crossAxisAlignment: "center",
                 children: [
                     {
-                        type: "widget",
+                        type: "view",
                         name: "header",
                         props: {
                             children: [
@@ -25,7 +25,7 @@ export default (data: any, props: any) => {
                                         }
                                     },
                                     child: {
-                                        type: "widget",
+                                        type: "view",
                                         name: "profilePictureWithNotification",
                                         coll: "users",
                                         query: {
@@ -92,7 +92,7 @@ export default (data: any, props: any) => {
                         },
                     },
                     {
-                        type: "widget",
+                        type: "view",
                         name: "postFeed",
                         coll: "posts"
                     }
